@@ -50,6 +50,10 @@ class ComedianSkill(MycroftSkill):
     def handle_rodney_intent(self, message):
         self.speak_dialog("rodney")
 
+    @intent_handler(IntentBuilder("grouchoIntent").require("grouchoKeyword"))  # noqa
+    def handle_groucho_intent(self, message):
+        self.speak_dialog("groucho")
+
     def stop(self):
         pass
 
